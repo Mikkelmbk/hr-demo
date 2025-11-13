@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="/assets/css/general.css">
     <link rel="stylesheet" href="/assets/css/c-header.css">
     <link rel="stylesheet" href="/assets/css/c-nav.css">
+    <link rel="stylesheet" href="/assets/css/c-form.css">
+    <link rel="stylesheet" href="/assets/css/c-caption.css">
     
     <script defer src="/assets/js/global-utils.js"></script>
     <script defer src="/assets/js/nav.js"></script>
+    <script defer src="/assets/js/config.js"></script>
     <script defer src="/assets/js/search-submit.js"></script>
 </head>
 <body>
@@ -28,9 +31,22 @@
         </nav>
     
         <main class="h-nav-spacing">
-            <!-- Content can be added here to appear above the grid display. -->
-            <div class="l-grid">
-            
+            <div class="l-flex l-flex--absolute-center">
+                <div class="c-caption">
+                    <h1 class="c-caption__headline">Configure Hello Retail Connection</h1>
+                </div>
+                <form class="c-form js-form">
+                    <fieldset class="c-form__fieldset">
+                        <span class="c-form__span">
+                            <label class="c-form__label" for="websiteUuid">placeholder:</label>
+                            <input class="c-form__input js-input-websiteUuid" name="websiteUuid" id="websiteUuid" type="text" placeholder="websiteUuid" required>
+                        </span>
+                        <span class="c-form__span">
+                            <button class="c-form__button js-button-apply">Apply settings</button>
+                        </span>
+                    </fieldset>
+                    <p class="c-form__server-response js-response"></p>
+                </form>
             </div>
         </main>
 

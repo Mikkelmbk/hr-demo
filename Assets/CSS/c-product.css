@@ -1,9 +1,9 @@
 .c-product{
-    background-color: var(--primary-theme-secondary-bg-color);
+    background-color: var(--primary-theme-secondary-color);
     padding:10px;
     transition: all .3s ease;
     height:100%;
-    color: var(--primary-theme-menu-text-color);
+    color: var(--primary-theme-light-text-color);
 }
 
 .c-product:hover{
@@ -35,7 +35,7 @@
 }
 
 .c-product__product-tile-id{
-    /* color: var(--primary-theme-menu-text-color); */
+    /* color: var(--primary-theme-light-text-color); */
     text-align:center;
     margin-top:10px;
 }
@@ -47,7 +47,7 @@
 }
 
 .c-product__figcaption{
-    /* color: var(--primary-theme-menu-text-color); */
+    /* color: var(--primary-theme-light-text-color); */
     /* padding: 15px 0; */
     margin-top:10px;
     font-weight:bold;

@@ -17,7 +17,7 @@
 }
 
 .c-swiper__heading{
-    color: var(--primary-theme-menu-text-color);
+    color: var(--primary-theme-light-text-color);
     margin-bottom:10px;
     text-align:center;
 }

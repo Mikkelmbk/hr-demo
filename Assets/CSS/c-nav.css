@@ -1,5 +1,5 @@
 .c-nav{
-    background-color: var(--primary-theme-secondary-bg-color);
+    background-color: var(--primary-theme-secondary-color);
     position:fixed;
     right:0;
     left:0;
@@ -20,19 +20,19 @@
 }
 
 .c-nav__a {
-    color: var(--primary-theme-menu-text-color);
+    color: var(--primary-theme-light-text-color);
     padding:calc((var(--primary-mobile-navigation-height) - 18px) / 2) 0; /* 18 is the height of the text. */
     display:block;
     transition: background-color .2s ease;
 }
 
 .c-nav__a:hover{
-    background-color: var(--primary-theme-hover-color);
+    background-color: var(--primary-theme-nav-hover-color);
 }
 
 .c-nav__a--active{
     color: var(--primary-theme-active-menu-text-color)!important;
-    background-color: var(--primary-theme-active-color)!important;
+    background-color: var(--primary-theme-nav-color)!important;
 }
 
 @media(min-width:768px){
