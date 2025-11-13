@@ -1,12 +1,13 @@
 :root{
-    --primary-theme-primary-bg-color: #fff;
-    --primary-theme-secondary-bg-color: #071939;
-    --primary-theme-hover-color: rgba(233, 30, 99, 1);
-    --primary-theme-active-color: rgba(233, 30, 99, 1);
-    /* --primary-theme-dark-blue: rgb(9, 101, 187); */
-    --primary-theme-text-color: black;
-    --primary-theme-menu-text-color: rgba(255, 255, 255, .8);
+    --primary-theme-primary-color: rgba(255, 255, 255, 1);
+    --primary-theme-secondary-color: rgba(7, 25, 57, 1);
+    --primary-theme-nav-color: rgba(233, 30, 99, 1);
+    --primary-theme-nav-hover-color: rgba(233, 30, 99, 1);
+    --primary-theme-button-color: rgba(7, 25, 57, 1);
+    --primary-theme-button-hover-color: rgb(13, 47, 105);
     --primary-theme-active-menu-text-color: rgba(255, 255, 255, .8);
+    --primary-theme-dark-text-color: rgba(0, 0, 0, 1);
+    --primary-theme-light-text-color: rgba(255, 255, 255, .8);
 
     --primary-theme-form-width: 70%;
     --primary-theme-form-max-width: 600px;
@@ -29,7 +30,7 @@
 }
 
 body{
-    background-color:var(--primary-theme-primary-bg-color);
+    background-color:var(--primary-theme-primary-color);
 }
 
 .is-hidden{
