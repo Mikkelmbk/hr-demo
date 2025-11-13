@@ -1,15 +1,10 @@
 if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/home/index.html') {
-    window.location.replace('/home');
-}
-
-let productTileId = new URLSearchParams(window.location.search).get('admin');
-if (window.location.pathname.includes('/admin')) {
-    productTileId = 'enabled';
+    window.location.replace('/landing-page');
 }
 
 const bodyElem = document.querySelector("body");
 const swiperAnchorElem = document.querySelector(".js-swiper-anchor");
-const BASE_ENDPOINT = "https://ak-galleri-backend.onrender.com";
+/*const BASE_ENDPOINT = "https://ak-galleri-backend.onrender.com";
 
 // swiperTemplate handles building the HTML structure required prior to slider initialization.
 function swiperTemplate(products, jsSliderName, heading) {
@@ -69,18 +64,6 @@ function swiperTemplate(products, jsSliderName, heading) {
         cProduct__section.appendChild(cProduct__dimensionContainer);
         cProduct__dimensionContainer.appendChild(cProduct__dimensionHeight);
         cProduct__dimensionContainer.appendChild(cProduct__dimensionWidth);
-
-        // productTileId conditional rendering
-        if (productTileId == 'enabled' && product._id) {
-            const cProduct__productTileId = document.createElement("p");
-
-            cProduct__productTileId.className = "c-product__product-tile-id";
-
-            cProduct__productTileId.textContent = `Produkt id: ${product._id}`;
-
-            cProduct__section.appendChild(cProduct__productTileId);
-        }
-
     });
 
     swiperInit(jsSliderName);
@@ -142,3 +125,4 @@ function swiperInit(jsSliderName) {
         });
     });
 }
+    */
