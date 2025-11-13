@@ -1,10 +1,12 @@
 :root{
-    --primary-theme-light-grey: rgba(39, 39, 39, 1);
-    --primary-theme-dark-grey: rgba(27, 27, 27, 1);
-    --primary-theme-light-blue: rgba(41, 142, 234, 1);
-    --primary-theme-dark-blue: rgb(9, 101, 187);
-    --primary-theme-transparent-text: rgba(255, 255, 255, .7);
-    --primary-theme-text: rgba(255, 255, 255, 1);
+    --primary-theme-primary-bg-color: #fff;
+    --primary-theme-secondary-bg-color: #071939;
+    --primary-theme-hover-color: rgba(233, 30, 99, 1);
+    --primary-theme-active-color: rgba(233, 30, 99, 1);
+    /* --primary-theme-dark-blue: rgb(9, 101, 187); */
+    --primary-theme-text-color: black;
+    --primary-theme-menu-text-color: rgba(255, 255, 255, .8);
+    --primary-theme-active-menu-text-color: rgba(255, 255, 255, .8);
 
     --primary-theme-form-width: 70%;
     --primary-theme-form-max-width: 600px;
@@ -27,7 +29,7 @@
 }
 
 body{
-    background-color:var(--primary-theme-dark-grey);
+    background-color:var(--primary-theme-primary-bg-color);
 }
 
 .is-hidden{

@@ -17,7 +17,7 @@
 }
 
 .c-form__label{
-    color: var(--primary-theme-text);
+    color: var(--primary-theme-text-color);
     display:none;
 }
 
@@ -29,13 +29,13 @@
 }
 
 .c-form__input--file-upload{
-    color: var(--primary-theme-text);
+    color: var(--primary-theme-text-color);
 }
 
 .c-form__button{
     text-align:center;
-    background: var(--primary-theme-light-blue);
-    color: var(--primary-theme-text);
+    background: var(--primary-theme-active-color);
+    color: var(--primary-theme-text-color);
     font-size:14px;
     font-weight:bold;
     border:none;
@@ -56,7 +56,7 @@
 }
 
 .c-form__server-response{
-    color: var(--primary-theme-text);
+    color: var(--primary-theme-text-color);
     text-align:center;
 }
 

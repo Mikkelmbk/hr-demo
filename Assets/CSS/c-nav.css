@@ -1,5 +1,5 @@
 .c-nav{
-    background-color: var(--primary-theme-light-grey);
+    background-color: var(--primary-theme-secondary-bg-color);
     position:fixed;
     right:0;
     left:0;
@@ -15,24 +15,24 @@
 }
 
 .c-nav__li{
-    flex-basis:20%;
+    flex-basis:25%;
     text-align:center;
 }
 
 .c-nav__a {
-    color: var(--primary-theme-transparent-text);
+    color: var(--primary-theme-menu-text-color);
     padding:calc((var(--primary-mobile-navigation-height) - 18px) / 2) 0; /* 18 is the height of the text. */
     display:block;
     transition: background-color .2s ease;
 }
 
 .c-nav__a:hover{
-    background-color: var(--primary-theme-dark-grey);
+    background-color: var(--primary-theme-hover-color);
 }
 
 .c-nav__a--active{
-    color: var(--primary-theme-text)!important;
-    background-color: var(--primary-theme-light-blue)!important;
+    color: var(--primary-theme-active-menu-text-color)!important;
+    background-color: var(--primary-theme-active-color)!important;
 }
 
 @media(min-width:768px){
