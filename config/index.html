@@ -36,19 +36,30 @@
                 <div class="c-caption">
                     <h1 class="c-caption__headline">Configure Hello Retail Connection</h1>
                 </div>
-                <form class="c-form js-form">
+                <!-- apply form -->
+                <form class="c-form js-form-apply">
                     <fieldset class="c-form__fieldset">
                         <span class="c-form__span">
                             <label class="c-form__label" for="websiteUuid">placeholder:</label>
                             <input class="c-form__input js-input-websiteUuid" name="websiteUuid" id="websiteUuid" type="text" placeholder="websiteUuid" required>
                         </span>
                         <span class="c-form__span">
-                            <button class="c-form__button js-button-apply">Apply settings</button>
+                            <button class="c-form__button js-button">Apply settings</button>
                         </span>
                     </fieldset>
                     <p class="c-form__server-response js-response"></p>
                 </form>
-                <button class="c-form__button c-form__button--reroute js-button-clear-localstorage  is-hidden">Clear stored websiteUuid</button>
+                
+                <!-- clear form -->
+                <form class="c-form c-form--captionless js-form-clear is-hidden">
+                    <fieldset class="c-form__fieldset">
+                        <span class="c-form__span">
+                            <button class="c-form__button js-button">Clear stored websiteUuid</button>
+                        </span>
+                    </fieldset>
+                    <p class="c-form__server-response js-response"></p>
+                </form>
+
             </div>
         </main>
 
