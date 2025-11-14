@@ -2,6 +2,7 @@ let cFormApply = document.querySelector('.js-form-apply');
 let cFormClear = document.querySelector('.js-form-clear');
 
 let cFormApply__inputWebsiteUuid = cFormApply.querySelector('.js-input-websiteUuid');
+let cFormApply__inputTracking = cFormApply.querySelector('.js-input-tracking');
 let cFormApply__response = cFormApply.querySelector(".js-response");
 
 let cFormClear__response = cFormClear.querySelector(".js-response");
@@ -9,13 +10,17 @@ let cFormClear__response = cFormClear.querySelector(".js-response");
 cFormApply.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    let Hello_Retail_Settings = {
+        websiteUuid: cFormApply__inputWebsiteUuid.value,
+        trackingOptOut: !cFormApply__inputTracking.checked
+    }
+
     window.hrq = window.hrq || [];
     hrq.push(['init',
-        {
-            websiteUuid: cFormApply__inputWebsiteUuid.value
-        }
+        Hello_Retail_Settings
     ]);
 
+    // Convert localStorage to stringified object of selected values, and ensure rest of code accommodates that approach.
     hrq.push(function () {
         localStorage.setItem("websiteUuid_from_config", cFormApply__inputWebsiteUuid.value);
 
