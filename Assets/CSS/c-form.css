@@ -20,9 +20,13 @@
     flex-direction:column;
 }
 
+.c-form__span--flex-row{
+    flex-direction:row;
+}
+
 .c-form__label{
     color: var(--primary-theme-dark-text-color);
-    display:none;
+    margin-right:5px;
 }
 
 .c-form__input{
