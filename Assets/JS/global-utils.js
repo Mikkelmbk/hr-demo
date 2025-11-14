@@ -1,5 +1,5 @@
 if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname === '/home/index.html') {
-    window.location.replace('/landing-page');
+    window.location.replace('/front-page');
 }
 
 const bodyElem = document.querySelector("body");
