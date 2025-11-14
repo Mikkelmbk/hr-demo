@@ -5,6 +5,10 @@
     flex-direction:column;
 }
 
+.c-form--captionless{
+    margin-top:20px;
+}
+
 .c-form__fieldset{
     all:unset;
     width:100%;
