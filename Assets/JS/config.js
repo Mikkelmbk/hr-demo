@@ -10,25 +10,24 @@ let cFormClear__response = cFormClear.querySelector(".js-response");
 cFormApply.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    let Hello_Retail_Settings = {
+    let helloRetailSettings = {
         websiteUuid: cFormApply__inputWebsiteUuid.value,
         trackingOptOut: !cFormApply__inputTracking.checked
     }
 
     window.hrq = window.hrq || [];
     hrq.push(['init',
-        Hello_Retail_Settings
+        helloRetailSettings
     ]);
 
-    // Convert localStorage to stringified object of selected values, and ensure rest of code accommodates that approach.
     hrq.push(function () {
-        localStorage.setItem("websiteUuid_from_config", cFormApply__inputWebsiteUuid.value);
+        localStorage.setItem("helloRetailSettings", JSON.stringify(helloRetailSettings));
 
-        cFormApply__response.textContent = `Website Uuid: "${cFormApply__inputWebsiteUuid.value}" was comitted to localstorage. Hello Retail Script will be initialized with Website Uuid from localstorage on subsequent page navigations, until you overwrite it.`;
+        cFormApply__response.textContent = `Website Uuid: "${cFormApply__inputWebsiteUuid.value}" was comitted to localstorage. Hello Retail Script will be initialized with Website Uuid from localstorage on subsequent page navigations, until you overwrite or clear it.`;
 
         cFormClear__response.textContent = "";
 
-        if (localStorage.getItem("websiteUuid_from_config")) {
+        if (localStorage.getItem("helloRetailSettings")) {
             cFormClear.classList.remove("is-hidden");
         }
     });
@@ -40,16 +39,15 @@ cFormApply.addEventListener('submit', (e) => {
     }, 750);
 });
 
-if (localStorage.getItem("websiteUuid_from_config")) {
+if (localStorage.getItem("helloRetailSettings")) {
     cFormClear.classList.remove("is-hidden");
 };
 
 cFormClear.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    cFormClear__response.textContent = `Website Uuid ${localStorage.getItem("websiteUuid_from_config")} was removed from localstorage.`;
-    localStorage.removeItem("websiteUuid_from_config");
+    cFormClear__response.textContent = `Website Uuid ${JSON.parse(localStorage.getItem("helloRetailSettings")).websiteUuid} was removed from localstorage. Reload page to initialize with new Website Uuid.`;
+    localStorage.removeItem("helloRetailSettings");
 
     cFormApply__response.textContent = "";
-
 });
