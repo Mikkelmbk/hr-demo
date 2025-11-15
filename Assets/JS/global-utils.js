@@ -2,6 +2,10 @@ if(window.location.pathname.includes("/index.html")){
     window.location.replace(window.location.href.split("index.html").shift());
 }
 
+if(document.querySelector("title").textContent.includes("- !redirect!")){
+    window.location.replace(`${window.location.href}front-page/`);
+}
+
 const bodyElem = document.querySelector("body");
 // const swiperAnchorElem = document.querySelector(".js-swiper-anchor");
 /*const BASE_ENDPOINT = "https://ak-galleri-backend.onrender.com";
