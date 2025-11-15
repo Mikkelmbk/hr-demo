@@ -1,8 +1,8 @@
-if(localStorage.getItem("websiteUuid_from_config")){
+if(localStorage.getItem("helloRetailSettings")){
+    let helloRetailSettings = JSON.parse(localStorage.getItem("helloRetailSettings"));
+
     window.hrq = window.hrq || [];
     hrq.push(['init',
-        {
-            websiteUuid: localStorage.getItem("websiteUuid_from_config")
-        }
+        helloRetailSettings
     ]);
 }
