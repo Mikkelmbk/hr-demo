@@ -15,6 +15,10 @@ cFormApply.addEventListener('submit', (e) => {
         trackingOptOut: !cFormApply__inputTracking.checked
     }
 
+    if(!cFormApply__inputTracking.checked){
+        document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    }
+
     window.hrq = window.hrq || [];
     hrq.push(['init',
         helloRetailSettings
@@ -48,6 +52,8 @@ cFormClear.addEventListener('submit', (e) => {
 
     cFormClear__response.textContent = `Website Uuid ${JSON.parse(localStorage.getItem("helloRetailSettings")).websiteUuid} was removed from localstorage. Reload page to initialize with new Website Uuid.`;
     localStorage.removeItem("helloRetailSettings");
+    
+    document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 
     cFormApply__response.textContent = "";
 });
