@@ -60,22 +60,6 @@ cFormClear.addEventListener('submit', (e) => {
     cFormApply__response.textContent = "";
 });
 
-// function handleConsent(){
-//     document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-// }
-function handleConsent() {
-    if (!cFormApply__inputTracking.checked) {
-        hrq = window.hrq || [];
-        hrq.push([
-            "setTrackingOptOut",
-            false
-        ]);
-    }
-    else {
-        hrq = window.hrq || [];
-        hrq.push([
-            "setTrackingOptOut",
-            true
-        ]);
-    }
+function handleConsent(){
+    document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 }
