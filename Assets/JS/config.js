@@ -15,8 +15,8 @@ cFormApply.addEventListener('submit', (e) => {
         trackingOptOut: !cFormApply__inputTracking.checked
     }
 
-    if(!cFormApply__inputTracking.checked){
-        clearHelloRetailCookie();
+    if (!cFormApply__inputTracking.checked) {
+        handleConsent();
     }
 
     window.hrq = window.hrq || [];
@@ -40,7 +40,7 @@ cFormApply.addEventListener('submit', (e) => {
         if (!window.hrq.listenForEmailFields_eventListeners && !cFormApply__response.textContent) {
             cFormApply__response.textContent = `Website Uuid not recognized. Reload the page and try again`;
 
-            clearHelloRetailCookie();
+            handleConsent();
         }
     }, 750);
 });
@@ -54,12 +54,28 @@ cFormClear.addEventListener('submit', (e) => {
 
     cFormClear__response.textContent = `Website Uuid ${JSON.parse(localStorage.getItem("helloRetailSettings")).websiteUuid} was removed from localstorage. Reload page to initialize with new Website Uuid.`;
     localStorage.removeItem("helloRetailSettings");
-    
-    clearHelloRetailCookie();
+
+    handleConsent();
 
     cFormApply__response.textContent = "";
 });
 
-function clearHelloRetailCookie(){
-    document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+// function handleConsent(){
+//     document.cookie = "hello_retail_id" + "=; path=/; domain=" + window.location.hostname + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+// }
+function handleConsent() {
+    if (!cFormApply__inputTracking.checked) {
+        hrq = window.hrq || [];
+        hrq.push([
+            "setTrackingOptOut",
+            false
+        ]);
+    }
+    else {
+        hrq = window.hrq || [];
+        hrq.push([
+            "setTrackingOptOut",
+            true
+        ]);
+    }
 }
