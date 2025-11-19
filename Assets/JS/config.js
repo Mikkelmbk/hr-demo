@@ -39,7 +39,6 @@ cFormApply.addEventListener('submit', (e) => {
     setTimeout(() => {
         if (!window.hrq.listenForEmailFields_eventListeners && !cFormApply__response.textContent) {
             cFormApply__response.textContent = `Website Uuid not recognized. Reload the page and try again`;
-
             handleConsent();
         }
     }, 750);
